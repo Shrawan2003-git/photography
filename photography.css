@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:
+        border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    /* background-color: lightgrey; */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pri-clr: #7971EA;
+    --sec-clr: #F23A2E;
+    --hov-clr: #FF1B1B;
+}
+
+header {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    background-image: url("images/sea\ creature.jpg");
+    background-size: cover;
+}
+
+.overlay{
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Navbar */
+nav {
+    width: 100vw;
+    height: 10vh;
+    padding: 0 15%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.hambur {
+    display: none;
+    cursor: pointer;
+}
+
+.fa-xmark {
+    cursor: pointer;
+}
+
+.sidebar {
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    letter-spacing: 2px;
+    padding: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.fa-brands {
+    margin-left: 30px;
+    transition: all 0.5s ease;
+}
+
+.menu ul li a:hover {
+    color: var(--pri-clr);
+}
+
+.social-link a {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-brands:hover {
+    color: var(--pri-clr);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+header p {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Sea Creature Gallery */
+.sCGContainer {
+    width: 100vw;
+    padding: 0 15%;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5%;
+    flex-wrap: wrap;
+}
+
+.sea-creature-gallery {
+    width: 16%;
+}
+
+.sea-creature-gallery img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Contact Me */
+.contactme {
+    width: 100vw;
+    padding: 9vh 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactme h3 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.contactme button {
+    font-size: 17px;
+    padding: 18px 40px;
+    border: none;
+    background-color: var(--sec-clr);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.contactme a {
+    text-decoration: none;
+    color: white;
+}
+
+.contactme button:hover {
+    background-color: var(--hov-clr);
+}
+
+/* Footer */
+footer {
+    width: 100vw;
+    padding: 12vh 15%;
+    background-color: #333333;
+    display: flex;
+    gap: 50px;
+    color: #697373;
+}
+
+footer h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+}
+
+footer p {
+    line-height: 30px;
+}
+
+.f-box-1 {
+    flex-basis: 400px;
+}
+
+.f-box-2 {
+    flex-basis: 300px;
+}
+
+.navCol {
+    display: flex;
+    gap: 100px;
+}
+
+.navCol ul li {
+    list-style: none;
+    color: #697373;
+    padding-bottom: 20px;
+    font-weight: 600;
+}
+
+.navCol ul li a {
+    text-decoration: none;
+    color: #697373;
+    transition: all 0.5s ease;
+}
+
+.follow-me-link a {
+    text-decoration: none;
+    color: #697373;
+}
+
+.s-link {
+    margin-left: 0px;
+    margin-right: 30px;
+    transition: all 0.5s ease;
+}
+
+.s-link:hover {
+    color: white;
+}
+
+.navCol ul li a:hover {
+    color: white;
+}
+
+.copyright {
+    width: 100vw;
+    text-align: center;
+    color: #697373;
+    background-color: #333333;
+    padding-bottom: 70px;
+}
+
+.copyright p {
+    margin-top: -2px;
+}
+
+/* Laptop Small*/
+@media only screen and (max-width:1025px) {
+
+    html,
+    body {
+        /* background-color: yellow; */
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100vw;
+        height: 80vh;
+        background-position: center;
+    }
+
+    nav {
+        height: 10vh;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .menu ul li {
+        padding: 10px;
+        font-size: 0.70rem;
+    }
+
+    .fa-brands {
+        margin-left: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    /* Sea Creature Gallery */
+    .sCGContainer {
+        padding: 0 5%;
+        padding-top: 60px;
+    }
+
+    .sea-creature-gallery {
+        width: 24%;
+    }
+
+    /* Contact Me */
+    .contactme {
+        padding: 7vh 5%;
+    }
+
+    /* Footer */
+    footer {
+        width: 100vw;
+        padding: 7vh 5%;
+        background-color: #333333;
+        display: flex;
+        gap: 50px;
+        color: #697373;
+    }
+
+    footer p {
+        line-height: 25px;
+    }
+
+    .f-box-1 {
+        flex-basis: 350px;
+    }
+
+    .f-box-2 {
+        flex-basis: 250px;
+    }
+
+    .navCol {
+        gap: 40px;
+    }
+
+    .navCol ul li {
+        font-size: 15px;
+        padding-bottom: 20px;
+    }
+
+    .s-link {
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+
+    .copyright {
+        padding-bottom: 50px;
+        font-size: 15px;
+    }
+
+}
+
+/* Tablets */
+@media only screen and (max-width:769px) {
+    nav {
+        padding: 0 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu,
+    .social-link {
+        display: none;
+    }
+
+    .hambur {
+        display: contents;
+        font-size: 30px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu ul li {
+        letter-spacing: 2px;
+        padding: 16px 6px;
+        font-size: 0.65rem;
+        font-weight: 600;
+    }
+
+    .fa-brands {
+        margin-left: 10px;
+        transition: all 0.5s ease;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.7rem;
+        top: 56%;
+    }
+
+    /* Sea Creature Gallery */
+    .sCGContainer {
+        padding: 0 5%;
+        padding-top: 60px;
+    }
+
+    .sea-creature-gallery {
+        width: 33%;
+    }
+
+    /* Contact Me */
+    .contactme {
+        padding: 5vh 5%;
+    }
+
+    .contactme h3 {
+        font-size: 25px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 6vh 5%;
+        gap: 25px;
+    }
+
+    footer h4 {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    footer p {
+        line-height: 25px;
+    }
+
+    .f-box-1 {
+        flex-basis: 300px;
+    }
+
+    .f-box-1 p {
+        font-size: 15px;
+    }
+
+    .navCol {
+        gap: 20px;
+        font-size: 15px;
+    }
+
+    .s-link {
+        margin-right: 25px;
+        margin-bottom: 20px;
+    }
+
+    .copyright {
+        padding-bottom: 50px;
+        font-size: 14px;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+        width: 40vw;
+        height: 100vh;
+        margin-left: 60vw;
+        padding-top: 17px;
+        padding-left: 10vw;
+        padding-right: 33px;
+        background-color: #fff;
+        position: fixed;
+        transition: all 0.3s ease-in-out;
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        transform: translateX(100%);
+    }
+
+    .sidebar label {
+        align-self: end;
+    }
+
+    .fa-xmark {
+        font-size: 35px;
+    }
+
+    .sidebar-menu ul li {
+        list-style: none;
+        padding-bottom: 40px;
+    }
+
+    .sidebar-menu ul li a {
+        transition: all 0.5s ease;
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidebar-menu ul li a:hover {
+        color: var(--pri-clr);
+    }
+
+    .sidebar-social-link {
+        font-size: 20px;
+        margin-left: -30px;
+        transition: all 0.5s ease;
+    }
+
+
+    .sidebar-social-link a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidebar-social-link a:hover {
+        color: var(--pri-clr);
+    }
+
+    input {
+        display: none;
+    }
+
+    #toggle-btn:checked~#sidebar {
+        transform: translateX(0);
+    }
+}
+
+/* iPhone 14 Pro Max */
+@media only screen and (max-width:431px) {
+    header {
+        height: 50vh;
+    }
+
+    /* Navbar */
+    nav {
+        height: 8vh;
+        padding: 0 5%;
+    }
+
+    h1 {
+        font-size: 32px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    header p {
+        font-size: 12px;
+        top: 62%;
+    }
+
+    /* Sea Creature Gallery */
+    .sCGContainer {
+        padding: 0 5%;
+        padding-top: 60px;
+    }
+
+    .sea-creature-gallery {
+        width: 100%;
+    }
+
+    /* Contact Me */
+    .contactme {
+        padding: 5vh 5%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        color: #697373;
+    }
+
+    .f-box-1 {
+        flex-basis: 0px;
+    }
+
+    .f-box-2 {
+        flex-basis: 0px;
+    }
+
+    .s-link {
+        margin-left: 0px;
+        margin-right: 20px;
+        transition: all 0.5s ease;
+    }
+
+    .copyright {
+        padding-bottom: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+        width: 70vw;
+        margin-left: 30vw;
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    .sidebar-social-link {
+        margin-left: -10px;
+    }
+}
+
+/* Mobiles */
+@media only screen and (max-width:426px) {
+
+    html,
+    body {
+        /* background-color: red; */
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    header {
+        width: 100vw;
+        height: 40vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+
+    }
+
+    nav {
+        width: 100vw;
+        height: 50px;
+        padding: 30px 3%;
+        padding-right: 20px;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+    }
+
+    .menu,
+    .social-link {
+        display: none;
+    }
+
+    .hambur {
+        display: contents;
+        font-size: 30px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    header p {
+        font-size: 10px;
+        top: 62%;
+    }
+
+    /* Sea Creature Gallery */
+    .sCGContainer {
+        padding: 0 5%;
+        padding-top: 60px;
+    }
+
+    .sea-creature-gallery {
+        width: 100%;
+    }
+
+    /* Contact Me */
+    .contactme {
+        padding: 5vh 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 10vh 5%;
+        padding-bottom: 4vh;
+        display: flex;
+        flex-direction: column;
+        column-gap: 10px;
+    }
+
+    .f-box-1 {
+        flex-basis: 0px;
+    }
+
+    .f-box-2 {
+        flex-basis: 0px;
+    }
+
+    .s-link {
+        margin-left: 0px;
+        margin-right: 30px;
+    }
+
+    .copyright {
+        padding: 5vh 5%;
+        margin-top: -2px;
+        font-size: 13px;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+        width: 70vw;
+        height: 100vh;
+        margin-left: 30vw;
+        padding-top: 14px;
+        padding-left: 10vw;
+        padding-right: 20px;
+        background-color: #fff;
+        position: fixed;
+        transition: all 0.3s ease-in-out;
+        z-index: 500;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform: translateX(100%);
+    }
+
+    .sidebar label {
+        align-self: end;
+    }
+
+    .fa-xmark {
+        font-size: 35px;
+    }
+
+    .sidebar-menu ul li {
+        list-style: none;
+        padding-bottom: 40px;
+    }
+
+    .sidebar-menu ul li a {
+        transition: all 0.5s ease;
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidebar-menu ul li a:hover {
+        color: var(--pri-clr);
+    }
+
+    .sidebar-social-link {
+        font-size: 20px;
+        margin-left: -10px;
+        transition: all 0.5s ease;
+    }
+
+
+    .sidebar-social-link a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .sidebar-social-link a:hover {
+        color: var(--pri-clr);
+    }
+
+    input {
+        display: none;
+    }
+
+    #toggle-btn:checked~#sidebar {
+        transform: translateX(0);
+    }
+}
